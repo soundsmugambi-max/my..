@@ -1,0 +1,366 @@
+
+/* RESET DEFAULT BROWSER STYLING */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* MAIN WEBSITE BACKGROUND */
+
+body {
+    min-height: 100vh;
+    background: radial-gradient(
+        circle at center,
+        #310018,
+        #16000d,
+        #080006
+    );
+
+    font-family: 'Georgia', serif;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+/* WELCOME SCREEN */
+
+.welcome-screen {
+    text-align: center;
+    width: 90%;
+    max-width: 750px;
+    padding: 35px 20px;
+}
+
+/* FLOATING HEARTS */
+
+.hearts {
+    font-size: 35px;
+    margin-bottom: 45px;
+
+    animation: heartbeat 1.5s infinite;
+}
+
+/* MAIN HEADING */
+
+h1 {
+    font-size: clamp(25px, 5vw, 42px);
+    line-height: 1.5;
+    color: #ffb4d5;
+
+    text-shadow: 0 0 15px #ff2e91;
+
+    margin-bottom: 25px;
+}
+
+/* SUBTITLE */
+
+.subtitle {
+    font-size: 17px;
+    color: #f5c8dc;
+    margin-bottom: 35px;
+    line-height: 1.8;
+}
+
+/* PINK BUTTON */
+
+button {
+    background: linear-gradient(
+        135deg,
+        #ff5ca8,
+        #e60073
+    );
+
+    color: white;
+    border: none;
+    border-radius: 35px;
+
+    padding: 15px 35px;
+    font-size: 17px;
+
+    cursor: pointer;
+
+    box-shadow: 0 0 20px #ff2e91;
+
+    transition: all 0.3s ease;
+}
+
+/* BUTTON HOVER EFFECT */
+
+button:hover {
+    transform: scale(1.1);
+
+    box-shadow:
+        0 0 20px #ff2e91,
+        0 0 40px #ff2e91;
+}
+
+/* HIDDEN MESSAGE */
+
+.hidden {
+    display: none;
+}
+
+#message {
+    margin-top: 35px;
+    font-size: 22px;
+    color: #ff9bc8;
+
+    animation: fadeIn 1.5s ease;
+}
+
+/* HEARTBEAT ANIMATION */
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* FADE IN ANIMATION */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* FLOATING HEART ANIMATION */
+
+.floating-heart {
+    position: fixed;
+    bottom: -40px;
+    font-size: 25px;
+    pointer-events: none;
+    z-index: 1000;
+    animation: floatUp 4s linear forwards;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* LOVE LETTER SECTION */
+
+#letter {
+    max-width: 520px;
+    margin: 35px auto 0;
+    padding: 30px 25px;
+
+    background: linear-gradient(
+        145deg,
+        #4b102d,
+        #250013
+    );
+
+    border: 1px solid #ff8fbd;
+    border-radius: 20px;
+
+    box-shadow: 0 0 30px #e6007355;
+
+    color: #ffd5e7;
+    line-height: 1.9;
+
+    animation: fadeIn 1.5s ease;
+}
+
+#letter h2 {
+    color: #ff9bc8;
+    margin: 15px 0;
+}
+
+.envelope {
+    font-size: 75px;
+    animation: heartbeat 1.5s infinite;
+}
+
+#openLetter {
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    #letter {
+        padding: 22px 16px;
+        font-size: 15px;
+    }
+}
+/* ALLOW THE PAGE TO SCROLL */
+
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* KEEP HIDDEN ELEMENTS HIDDEN */
+
+#message.hidden,
+#letter.hidden {
+    display: none;
+}
+
+/* ROMANTIC MUSIC PLAYER */
+
+.music-player {
+    margin: 30px auto 10px;
+    padding: 25px 15px;
+
+    max-width: 400px;
+
+    background: rgba(255, 70, 145, 0.10);
+
+    border: 1px solid #ff79b5;
+    border-radius: 20px;
+
+    box-shadow: 0 0 20px #ff2e9140;
+
+    text-align: center;
+}
+
+.music-player h3 {
+    color: #ff9bc8;
+    margin-bottom: 12px;
+}
+
+.music-player p {
+    color: #ffd5e7;
+    margin-bottom: 18px;
+    font-size: 15px;
+}
+
+#musicButton {
+    min-width: 190px;
+}
+
+/* =================================
+   GRAND ROMANTIC FINALE
+================================= */
+
+#finalScreen {
+    min-height: 100vh;
+    width: 100%;
+    padding: 35px 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #4a0028,
+            #19000f,
+            #080006
+        );
+
+    animation: fadeIn 1.5s ease;
+}
+
+#finalScreen h1 {
+    font-size: clamp(35px, 7vw, 60px);
+    color: #ff9bc8;
+    text-shadow: 0 0 25px #ff2e91;
+    margin-bottom: 15px;
+}
+
+#finalScreen h2 {
+    color: #ffd5e7;
+    font-size: clamp(22px, 4vw, 34px);
+    margin-bottom: 25px;
+}
+
+.final-hearts {
+    font-size: 40px;
+    margin-bottom: 25px;
+    animation: heartbeat 1.5s infinite;
+}
+
+.final-message {
+    color: #ffd5e7;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.final-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+#yesButton {
+    background: linear-gradient(135deg, #ff5ca8, #e60073);
+    box-shadow: 0 0 25px #ff2e91;
+}
+
+#thinkButton {
+    background: transparent;
+    border: 2px solid #ff79b5;
+    color: #ffb4d5;
+}
+
+#finalResponse {
+    color: #ffb4d5;
+    font-size: 23px;
+    line-height: 1.7;
+    margin-top: 35px;
+    animation: fadeIn 1.5s ease;
+}
+
+#finalScreen.hidden {
+    display: none;
+}
+
+/* FULL SCREEN MODE */
+
+body.final-mode {
+    display: block;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+body.final-mode #finalScreen {
+    display: flex;
+}
+
+/* MOBILE DESIGN */
+
+@media (max-width: 600px) {
+
+    .final-buttons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .final-buttons button {
+        width: 100%;
+    }
+
+}

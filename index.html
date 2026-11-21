@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love-Reel ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- WELCOME SCREEN -->
+    <main class="welcome-screen">
+
+        <div class="hearts">
+            <span>❤️</span>
+            <span>💗</span>
+            <span>❤️</span>
+        </div>
+
+        <h1>POV: YOU GIVE MASOUNDS A CHANCE ❤️</h1>
+
+        <p class="intro">
+            Someone has something special to tell you...
+        </p>
+
+        <button id="loveButton">
+            Click Me ❤️
+        </button>
+
+        <div id="message" class="hidden"></div>
+
+        <!-- LOVE LETTER -->
+        <div id="letter" class="hidden">
+
+            <h2>My Dearest Masounds 💌</h2>
+
+            <p>
+                I don't know exactly how to put my feelings into words,
+                but I know that you are someone special to me.
+            </p>
+
+            <p>
+                Every time I think about you, I find another reason
+                to smile. I would love the opportunity to know you
+                better and create beautiful memories together.
+            </p>
+
+            <p>
+                I am not promising perfection, but I am promising
+                honesty, care, respect, and genuine affection.
+            </p>
+
+            <p>
+                With love, ❤️
+            </p>
+
+            <button id="finalScreenButton">
+                One Last Thing... ❤️
+            </button>
+
+        </div>
+
+        <!-- MUSIC CONTROL -->
+        <button id="musicButton">
+            Play Music 🎵
+        </button>
+
+        <audio id="backgroundMusic" loop>
+            <source src="lover.mp3" type="audio/mpeg">
+            Your browser does not support audio.
+        </audio>
+
+    </main>
+
+
+    <!-- FINAL FULL-SCREEN QUESTION -->
+    <!-- IMPORTANT: Keep this OUTSIDE welcome-screen -->
+
+    <section id="finalScreen" class="hidden">
+
+        <div class="final-hearts">
+            💗 ❤️ 💗
+        </div>
+
+        <h1>Masounds ❤️</h1>
+
+        <h2>Will You Give Me A Chance?</h2>
+
+        <p class="final-message">
+            I've been wanting to ask you something special...
+            <br><br>
+            You make my world brighter. 🥺
+        </p>
+
+        <div class="final-buttons">
+
+            <button id="yesButton">
+                YES ❤️
+            </button>
+
+            <button id="thinkButton">
+                LET ME THINK 🥺
+            </button>
+
+        </div>
+
+        <p id="finalResponse" class="hidden"></p>
+
+    </section>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>
